@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="JzS-sZ-0Le" id="Ke6-QM-Jxc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Players" id="bXf-KX-H5z">
+                    <navigationItem key="navigationItem" title="Players...not" id="bXf-KX-H5z">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="r3C-Ac-HaK">
                             <connections>
                                 <segue destination="wzO-mn-i27" kind="modal" identifier="AddPlayer" modalTransitionStyle="coverVertical" id="c4f-fZ-eNQ"/>
@@ -233,6 +233,28 @@
         <image name="Gestures.png" width="30" height="30"/>
         <image name="Players.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="PlayerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratingImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="PlayerDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="PlayersViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayersViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
